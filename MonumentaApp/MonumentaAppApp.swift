@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MonumentaAppApp: App {
+    @StateObject var vm = ChatBotModel()
+   
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchScreen()
+                .environmentObject(vm)
         }
     }
 }
